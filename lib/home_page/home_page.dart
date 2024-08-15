@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     title: Text(
                       photo.title,
-                      style: GoogleFonts.roboto(
+                      style: GoogleFonts.abel(
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       // style: const TextStyle(fontFamily: 'Roboto'),
