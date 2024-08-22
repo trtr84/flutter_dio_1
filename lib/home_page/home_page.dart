@@ -32,24 +32,25 @@ class _HomePageState extends State<HomePage> {
             // List<Users> users = snapshot.data!;
             List<Photos> photos = snapshot.data!;
             return ListView.builder(
-                itemCount: photos.length,
-                itemBuilder: (context, index) {
-                  Photos photo = photos[index];
-                  return ListTile(
-                    leading: Image.network(
-                      photo.url,
-                      width: 20,
-                      height: 30,
+              itemCount: photos.length,
+              itemBuilder: (context, index) {
+                Photos photo = photos[index];
+                return ListTile(
+                  leading: Image.network(
+                    photo.url,
+                    width: 20,
+                    height: 30,
+                  ),
+                  title: Text(
+                    photo.title,
+                    style: GoogleFonts.abel(
+                      textStyle: const TextStyle(fontSize: 20),
                     ),
-                    title: Text(
-                      photo.title,
-                      style: GoogleFonts.abel(
-                        textStyle: const TextStyle(fontSize: 20),
-                      ),
-                      // style: const TextStyle(fontFamily: 'Roboto'),
-                    ),
-                  );
-                });
+                    // style: const TextStyle(fontFamily: 'Roboto'),
+                  ),
+                );
+              },
+            );
           }
         },
       ),
